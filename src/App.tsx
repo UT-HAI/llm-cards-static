@@ -27,8 +27,8 @@ export default function App() {
       </Container>
 
       {/* The Challenge (context) */}
-      <Container backgroundColor="#2B2B2B" style={{ padding: "2rem 0" }}>
-        <p className="text-lg mb-6">The Challenge</p>
+      <Container backgroundColor="#2B2B2B" style={{ padding: "4rem 0" }}>
+        <p className="text-lg mb-8">The Challenge</p>
         <h1 className="serif mb-10">
           As LLMs enter workplaces, co-designing them with workers is essential
           to center worker priorities and agency. Yet co-design is challenging
@@ -42,7 +42,7 @@ export default function App() {
         textColor="black"
         style={{ padding: "2rem 0" }}
       >
-        <p className="text-lg mb-6">Our Answer</p>
+        <p className="text-lg mb-8">Our Answer</p>
         <h1 className="serif mb-10">
           We present a two-phase co-design method that pairs LLM capability
           cards with hands-on prototyping to ground ideation in real workflows.

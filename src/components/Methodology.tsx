@@ -16,7 +16,7 @@ function SingleMethod({ number, children }: SingleMethodProps) {
   return (
     <div className="text-center">
       <div className="serif text-6xl mb-6">{number}</div>
-      <p className="border">{children}</p>
+      <p className="">{children}</p>
     </div>
   );
 }

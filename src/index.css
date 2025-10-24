@@ -27,12 +27,14 @@ h1,
 }
 
 p,
+a,
 .sans-serif {
   font-family: "DM Sans", Helvetica, sans-serif;
 }
 
 a {
   color: white;
+  text-decoration: underline;
 }
 
 .flex-center {

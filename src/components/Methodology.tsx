@@ -14,8 +14,8 @@ interface SingleMethodProps {
 
 function SingleMethod({ number, children }: SingleMethodProps) {
   return (
-    <div className="text-center">
-      <div className="serif text-6xl mb-6">{number}</div>
+    <div className="grid grid-cols-[4rem_auto] mb-8">
+      <div className="serif text-6xl mt-[-1rem]">{number}</div>
       <p className="">{children}</p>
     </div>
   );
@@ -23,8 +23,8 @@ function SingleMethod({ number, children }: SingleMethodProps) {
 
 export default function Methodology() {
   return (
-    // todo: breakpoints for flexwrap
-    <div className="flex-center mb-8 gap-4">
+    <div className="mb-8 max-w-[700px] mx-auto">
+      <p className="text-lg mt-20 mb-6">Our Method</p>
       {methodologyData.map((datum, idx) => (
         <SingleMethod key={`method${idx}`} number={idx + 1}>
           {datum}

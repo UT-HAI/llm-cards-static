@@ -104,7 +104,7 @@ export default function App() {
         <p className="text-lg font-bold italic text-center mt-12 mb-6">
           Study Overview
         </p>
-        <img src="/assets/study.png" alt="Study overview" />
+        <img src="./assets/study.png" alt="Study overview" />
       </Container>
 
       <Container

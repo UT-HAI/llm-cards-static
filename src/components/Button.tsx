@@ -1,16 +1,23 @@
-interface CardsDownloadButtonProps {
+import type { ReactNode } from "react";
+
+interface ButtonProps {
+  children: ReactNode;
+  href: string;
   backgroundColor?: string;
   textColor?: string;
 }
 
-export default function CardsDownloadButton({
+export default function Button({
+  children,
+  href,
   backgroundColor = "#1c2f60",
   textColor = "white",
-}: CardsDownloadButtonProps) {
+}: ButtonProps) {
   return (
     <button className="text-lg">
       <a
-        href=""
+        href={href}
+        target="_blank"
         className="sans-serif underline border py-3 px-5"
         style={{
           backgroundColor: backgroundColor,
@@ -18,7 +25,7 @@ export default function CardsDownloadButton({
           color: textColor,
         }}
       >
-        Get the Card Deck
+        {children}
       </a>
     </button>
   );

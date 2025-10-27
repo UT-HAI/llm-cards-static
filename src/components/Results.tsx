@@ -1,13 +1,12 @@
 const resultsData: string[] = [
   "15 Social Workers Interviewed",
   "100 LLM Ideas Generated",
-  "X LLM Ideas Generated",
-  "X LLM Ideas Generated",
+  "3 LLM readiness tiers for social work tasks identified",
 ];
 
 export default function Results() {
   return (
-    <div className="grid grid-cols-4">
+    <div className="grid grid-cols-3">
       {resultsData.map((datum, idx) => {
         const splitAt = datum.indexOf(" ");
         const number = datum.slice(0, splitAt);

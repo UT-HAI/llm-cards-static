@@ -17,6 +17,8 @@ const colors: { [name: string]: string } = {
   "deep-blue": "#1c2f60",
 };
 
+//todo: make workshop button download the actual contents
+
 export default function App() {
   return (
     <>
@@ -118,10 +120,22 @@ export default function App() {
           understand, discuss, and design with LLM’s. In our study, the cards
           connected social workers’ experience to what LLM can do and surfaced
           the levels of decision-making power it required to perform
-          capabilities across in the Bloom’s Taxonomy ladder.
+          capabilities across in the{" "}
+          <a
+            href="https://teaching.cornell.edu/resource/blooms-taxonomy"
+            target="_blank"
+            className="serif"
+            style={{ color: "#272555" }}
+          >
+            Bloom’s Taxonomy
+          </a>{" "}
+          ladder.
         </h2>
 
-        {/* todo: video embed here of cards if possible */}
+        <video controls className="mb-12">
+          <source src="./assets/capabilities_recording.mp4" type="video/mp4" />
+        </video>
+
         <img
           src="./assets/taxonomy_capabilities.png"
           alt="LLM capabilities taxonomy"
@@ -143,40 +157,47 @@ export default function App() {
         </p>
         <img src="./assets/card_anatomy.png" alt="Card anatomy" />
 
-        <p className="mt-8 mb-2">The cards helped participants:</p>
-        <ul className="list-disc pl-6">
-          <li>
-            See what kinds of reasoning and decisions an LLM makes in their
-            workflow
-          </li>
-          <li>Distinguish between automation and augmentation</li>
-          <li>Make abstract AI behavior visible and discussable</li>
-          <li>Support worker agency by clarifying what should remain human</li>
-        </ul>
-      {/* todo: add "get the card deck" btn here, centered */}
+        <h3 className="serif mb-10 text-4xl my-10">
+          By organizing LLM capabilities into Bloom’s Taxonomy’s categories, it
+          turns abstract possibilities into concrete functions while
+          highlighting the decisions an LLM makes when performing a task.
+        </h3>
+
+        <p className="mt-8 mb-2 max-w-180">
+          This offers users—especially non-experts—a transparent view of its
+          capabilities. Without this structured breakdown, many users
+          underestimate the extent of decision-making power they delegate to an
+          LLM. By visualizing these capabilities through the Bloom’s Taxonomy
+          ladder, users gain both transparency and control, becoming more aware
+          of the LLM’s impact on tasks like creating, categorizing, and
+          evaluating.
+        </p>
+
+        {/* todo: add "get the card deck" btn here, centered */}
       </Container>
 
       <Container
-        backgroundColor={colors["offwhite-yellow"]}
+        backgroundColor={"white"}
         textColor={colors["accent-orange"]}
         style={{ padding: "8rem 0" }}
       >
+        {/* todo: add workshop photos here */}
+
         <p className="text-lg font-bold italic text-center mb-8">
           Results in Numbers
         </p>
         <Results />
+
+        {/* todo: add "get the card deck" btn here, centered */}
       </Container>
 
       <Container
         backgroundColor={colors["pastel-green"]}
         textColor="#1C2F60"
-        style={{ padding: "4rem 0" }}
+        style={{ padding: "10rem 0" }}
       >
-        <p className="text-lg mb-8">Future Considerations + CTA</p>
         <h2 className="serif mb-10">
-          For Designers
-          <br />
-          For Researchers
+          Try out the Capability Cards in your LLM Co-Design project.
         </h2>
 
         <Button href="" backgroundColor={colors["accent-orange"]}>
@@ -187,23 +208,28 @@ export default function App() {
       <Container
         backgroundColor={colors["deep-blue"]}
         textColor="white"
-        style={{ padding: "4rem 0" }}
+        style={{ padding: "6rem 0" }}
       >
-        <p className="text-lg mb-8">Share Your Feedback</p>
-        <ParagraphText>
-          Tried our cards or explored the study? We’d love to hear what you
-          think! Your feedback helps us improve and design better tools for
-          everyone.
-        </ParagraphText>
+        <p className="text-lg mb-8">Team</p>
+        <p className="my-2">
+          <b className="mr-6">Whit Nelson</b> Lead Researcher
+        </p>
+        <p className="my-2">
+          <b className="mr-6">Meah Lin</b> Researcher, Writer, UI Designer
+        </p>
+        <p className="my-2">
+          <b className="mr-6">Jake Lohman</b> Writer, Developer
+        </p>
 
-        <br />
-        <br />
-        <Button
-          href="https://docs.google.com/forms/d/e/1FAIpQLSe7d5uN0fuuh8XTSdzz-BPjmM357G0jKEUOrwhRVUlMe9DzKw/viewform?usp=header"
-          backgroundColor={colors["accent-orange"]}
-        >
-          Share Your Feedback
-        </Button>
+        <p className="mt-16 mb-4">Got any feedback for us?</p>
+        <p>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSe7d5uN0fuuh8XTSdzz-BPjmM357G0jKEUOrwhRVUlMe9DzKw/viewform?usp=header"
+            target="_blank"
+          >
+            Feedback Form
+          </a>
+        </p>
       </Container>
     </>
   );

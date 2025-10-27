@@ -108,6 +108,55 @@ export default function App() {
       </Container>
 
       <Container
+        backgroundColor={"#EEF1F8"}
+        textColor={"#272555"}
+        style={{ padding: "8rem 0" }}
+      >
+        <p className="text-lg mb-8">Bloom-Aligned Capability Cards</p>
+        <h2 className="serif mb-10">
+          The Capability Cards were key to helping non-technical stakeholders
+          understand, discuss, and design with LLM’s. In our study, the cards
+          connected social workers’ experience to what LLM can do and surfaced
+          the levels of decision-making power it required to perform
+          capabilities across in the Bloom’s Taxonomy ladder.
+        </h2>
+
+        {/* todo: video embed here of cards if possible */}
+        <img
+          src="./assets/taxonomy_capabilities.png"
+          alt="LLM capabilities taxonomy"
+        />
+
+        <p className="text-lg font-bold italic text-center mt-12 mb-6">
+          Cards Preview
+        </p>
+        <p className="text-center mx-auto mb-8 max-w-180">
+          Each card represents a different kind of thinking a model can
+          perform—like remembering, analyzing, or creating—based on Bloom’s
+          Taxonomy. By sorting capabilities into these levels, the cards make
+          LLM behavior easier to see, compare, and discuss.
+        </p>
+        <img src="./assets/cards_preview.png" alt="Cards preview" />
+
+        <p className="text-lg font-bold italic text-center mt-12 mb-6">
+          What's on the Card
+        </p>
+        <img src="./assets/card_anatomy.png" alt="Card anatomy" />
+
+        <p className="mt-8 mb-2">The cards helped participants:</p>
+        <ul className="list-disc pl-6">
+          <li>
+            See what kinds of reasoning and decisions an LLM makes in their
+            workflow
+          </li>
+          <li>Distinguish between automation and augmentation</li>
+          <li>Make abstract AI behavior visible and discussable</li>
+          <li>Support worker agency by clarifying what should remain human</li>
+        </ul>
+      {/* todo: add "get the card deck" btn here, centered */}
+      </Container>
+
+      <Container
         backgroundColor={colors["offwhite-yellow"]}
         textColor={colors["accent-orange"]}
         style={{ padding: "8rem 0" }}

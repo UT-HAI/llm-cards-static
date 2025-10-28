@@ -1,8 +1,8 @@
 import "./App.css";
-import Button from "./components/Button";
 import CoDesign from "./components/CoDesign";
 import Container from "./components/Container";
 import FloatIn from "./components/FloatIn";
+import GetTheCardDeck from "./components/GetTheCardDeck";
 import ParagraphText from "./components/ParagraphText";
 import Results from "./components/Results";
 
@@ -38,9 +38,7 @@ export default function App() {
             Tools and Framework for Co-Designing LLM Platforms
           </p>
 
-          <Button href="" backgroundColor={colors["accent-orange"]}>
-            Get the Card Deck
-          </Button>
+          <GetTheCardDeck />
         </FloatIn>
       </Container>
 
@@ -182,7 +180,9 @@ export default function App() {
           <p className="text-lg font-bold italic text-center mt-12 mb-6">
             What's on the Card
           </p>
-          <img src="./assets/card_anatomy.png" alt="Card anatomy" />
+          <div className="bg-white max-w-[750px] mx-auto px-[24px]">
+            <img src="./assets/card_anatomy.png" alt="Card anatomy" />
+          </div>
         </FloatIn>
 
         <FloatIn>
@@ -200,11 +200,8 @@ export default function App() {
             more aware of the LLM’s impact on tasks like creating, categorizing,
             and evaluating.
           </ParagraphText>
-          <br />
-          <br />
-          <Button href="" backgroundColor={colors["accent-orange"]} center>
-            Get the Card Deck
-          </Button>
+
+          <GetTheCardDeck center marginTop="4rem" />
         </FloatIn>
       </Container>
 
@@ -242,7 +239,7 @@ export default function App() {
           </p>
           <Results />
 
-          {/* todo: add "get the card deck" btn here, centered */}
+          <GetTheCardDeck center marginTop="5rem" />
         </FloatIn>
       </Container>
 
@@ -256,9 +253,7 @@ export default function App() {
             Try out the Capability Cards in your LLM Co-Design project.
           </h2>
 
-          <Button href="" backgroundColor={colors["accent-orange"]}>
-            Get the Card Deck
-          </Button>
+          <GetTheCardDeck marginTop="4rem" />
         </FloatIn>
       </Container>
 

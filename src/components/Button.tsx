@@ -5,6 +5,7 @@ interface ButtonProps {
   href: string;
   backgroundColor?: string;
   textColor?: string;
+  center?: boolean;
 }
 
 export default function Button({
@@ -12,9 +13,13 @@ export default function Button({
   href,
   backgroundColor = "#1c2f60",
   textColor = "white",
+  center = false,
 }: ButtonProps) {
   return (
-    <button className="text-lg">
+    <button
+      className="text-lg"
+      style={{ display: "block", margin: center ? "0 auto" : "" }}
+    >
       <a
         href={href}
         target="_blank"

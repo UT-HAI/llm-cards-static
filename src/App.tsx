@@ -24,7 +24,7 @@ export default function App() {
   return (
     <>
       <Container
-        backgroundColor={colors["faded-purple"]}
+        backgroundColor={"#9198E5"}
         style={{
           padding: "13rem 0",
         }}
@@ -200,9 +200,12 @@ export default function App() {
             more aware of the LLM’s impact on tasks like creating, categorizing,
             and evaluating.
           </ParagraphText>
+          <br />
+          <br />
+          <Button href="" backgroundColor={colors["accent-orange"]} center>
+            Get the Card Deck
+          </Button>
         </FloatIn>
-
-        {/* todo: add "get the card deck" btn here, centered */}
       </Container>
 
       <Container
@@ -210,7 +213,27 @@ export default function App() {
         textColor={colors["accent-orange"]}
         style={{ padding: "8rem 0" }}
       >
-        <FloatIn>workshop cards here</FloatIn>
+        <FloatIn>
+          <p className="text-lg font-bold italic text-center mb-8">
+            Workshop Photos
+          </p>
+          <div className="flex gap-4 justify-center items-center [&>img]:w-[300px] flex-wrap mb-24">
+            <img
+              src="./assets/workshop/0.jpg"
+              alt="Social worker using LLM interface"
+            />
+            <img src="./assets/workshop/1.png" alt="LLM Cards in use" />
+            <img
+              src="./assets/workshop/2.png"
+              alt="Social workers brainstorming"
+            />
+            <img src="./assets/workshop/3.jpg" alt="Brainstorming board" />
+            <img
+              src="./assets/workshop/4.jpg"
+              alt="Social workers organizing ideas"
+            />
+          </div>
+        </FloatIn>
         {/* todo: add workshop photos here */}
 
         <FloatIn>

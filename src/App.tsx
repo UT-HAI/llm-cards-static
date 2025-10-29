@@ -24,21 +24,25 @@ export default function App() {
   return (
     <>
       <Container
-        backgroundColor={"#9198E5"}
+        backgroundColor=""
+        backgroundImage="url(./assets/workshop/1.png)"
         style={{
           padding: "13rem 0",
         }}
+        textColor="#1C2F60"
       >
         <FloatIn>
-          <h1 className="serif mt-[-3rem] mb-10">
-            Large Language Model (LLM) Capability Cards
-          </h1>
+          <div className="bg-white/90 p-8 pb-12 max-w-[45rem] mx-auto">
+            <h1 className="serif mb-10 font-semibold">
+              Large Language Model Capability Cards
+            </h1>
 
-          <p className="text-lg mb-14">
-            Tools and Framework for Co-Designing LLM Platforms
-          </p>
+            <p className="text-lg mb-14">
+              A Tool for Co-Designing LLMs with Stakeholders
+            </p>
 
-          <GetTheCardDeck />
+            <GetTheCardDeck />
+          </div>
         </FloatIn>
       </Container>
 
@@ -50,22 +54,21 @@ export default function App() {
         <p className="text-lg mb-8">The Challenge</p>
         <FloatIn>
           <h2 className="serif mb-10">
-            Tools powered by Large Language Models like Microsoft Copilot, Chat
-            GPT, Claude, and Google Gemini promise faster, easier, and smarter
-            workflows. However, not all of them center worker priorities,
+            Tools powered by Large Language Models (LLM) like Microsoft Copilot,
+            Chat GPT, Claude, and Google Gemini promise faster, easier, and
+            smarter workflows. However, not all of them center worker needs,
             agency, and values.
           </h2>
           <ParagraphText>
             Organizations often push new technologies onto workers without
-            soliciting or incorporating people’s demands. Additionally, since
-            LLMs only gained public attention recently, workers may not be
-            familiar with LLMs capabilities enough to articulate their demands
-            on this emerging technology.
+            soliciting or incorporating workers’ priorities. Additionally,
+            workers may not be familiar with LLM capabilities enough to
+            articulate their demands.
             <br />
             <br />
             <b>
               So, how do we give workers sufficient knowledge on LLM
-              capabilities to build the tools that meet their demands?
+              capabilities to build the tools that center their needs?
             </b>
           </ParagraphText>
         </FloatIn>
@@ -80,18 +83,32 @@ export default function App() {
 
         <FloatIn>
           <h2 className="serif mb-10">
-            To address this challenge. We use the Co-Design method involve users
-            in the early design process. Our aim was to design <i>with</i> our
-            users, not <i>for</i> them.
+            This discrepancy is what we faced in our research project. To
+            address it, we employed the{" "}
+            <a
+              href="https://www.interaction-design.org/literature/topics/interaction-design"
+              target="_blank"
+              className="serif"
+            >
+              Co-Design
+            </a>{" "}
+            method along with an LLM Capability Card Deck. Our aim was to design{" "}
+            <i>with</i>, not <i>for</i>, our users.
           </h2>
 
           <CoDesign maxWidth="50rem" />
-
-          <p className="my-8">
-            The following section features a our research project that puts
-            co-design into practice.
-          </p>
         </FloatIn>
+      </Container>
+
+      <Container
+        backgroundColor=""
+        backgroundImage="url(./assets/workshop/4.jpg)"
+        style={{
+          padding: "200px 0",
+        }}
+        textColor="#1C2F60"
+      >
+        {" "}
       </Container>
 
       <Container
@@ -106,10 +123,10 @@ export default function App() {
         <FloatIn>
           <h2 className="serif mb-10">
             Starting out as a partnership with the City of Austin in 2023, our
-            team of researchers conducted two-phased co-design sessions with
-            fifteen practicing social workers to generate more than 100 ways
-            that LLM can help their workflow by translating LLM capabilities
-            into approachable, user-oriented representations.
+            team conducted two-phased co-design sessions with fifteen practicing
+            social workers to generate more than 100 ways that LLM could help
+            their workflow by translating LLM capabilities into approachable,
+            user-oriented representations.
           </h2>
         </FloatIn>
 
@@ -118,6 +135,11 @@ export default function App() {
             Study Overview
           </p>
           <img src="./assets/study.png" alt="Study overview" />
+          <p className="text-center px-8 mb-16 mt-6">
+            A structured two-session framework for aligning workflows with AI
+            support: from mapping tasks and determining AI integration levels to
+            generating synthetic data and prototyping LLM-driven solutions.
+          </p>
         </FloatIn>
       </Container>
 
@@ -131,10 +153,19 @@ export default function App() {
         <FloatIn>
           <h2 className="serif mb-10">
             The Capability Cards were key to helping non-technical stakeholders
-            understand, discuss, and design with LLM’s. In our study, the cards
-            connected social workers’ experience to what LLM can do and surfaced
-            the levels of decision-making power it required to perform
-            capabilities across in the{" "}
+            understand, discuss, and design with LLM’s. We used{" "}
+            <a
+              href="https://teaching.cornell.edu/resource/blooms-taxonomy"
+              target="_blank"
+              className="serif"
+              style={{ color: "#272555" }}
+            >
+              Bloom’s Taxonomy
+            </a>{" "}
+            to organize LLM capabilities into six categories. This helped
+            connect workers’ experience to what an LLM could do and surface
+            differing levels of complexity involved in performing capabilities
+            across the{" "}
             <a
               href="https://teaching.cornell.edu/resource/blooms-taxonomy"
               target="_blank"
@@ -148,12 +179,18 @@ export default function App() {
         </FloatIn>
 
         <FloatIn>
-          <video controls className="mb-12">
+          <video controls className="mb-8">
             <source
               src="./assets/capabilities_recording.mp4"
               type="video/mp4"
             />
           </video>
+
+          <p className="text-center px-8 mb-16">
+            An animation that illustrates how our team used the Bloom’s Taxonomy
+            to organize LLM capabilities so they were easier for our users to
+            understand.
+          </p>
         </FloatIn>
 
         <FloatIn>
@@ -161,6 +198,12 @@ export default function App() {
             src="./assets/taxonomy_capabilities.png"
             alt="LLM capabilities taxonomy"
           />
+
+          <p className="text-center px-8 mb-16 mt-6">
+            Bloom-aligned LLM capabilities: A pyramid framework showcasing
+            levels from Remembering to Generating, with practical prompt
+            examples for each cognitive stage.
+          </p>
         </FloatIn>
 
         <FloatIn>
@@ -188,17 +231,16 @@ export default function App() {
         <FloatIn>
           <h3 className="serif mb-10 text-4xl my-10">
             By organizing LLM capabilities into Bloom’s Taxonomy’s categories,
-            it turns abstract possibilities into concrete functions while
-            highlighting the decisions an LLM makes when performing a task.
+            we turned abstract possibilities into concrete functions. This
+            approach also offer users, especially non-experts, a transparent
+            view of its capabilities.
           </h3>
           <ParagraphText>
-            This offers users—especially non-experts—a transparent view of its
-            capabilities. Without this structured breakdown, many users
-            underestimate the extent of decision-making power they delegate to
-            an LLM. By visualizing these capabilities through the Bloom’s
-            Taxonomy ladder, users gain both transparency and control, becoming
-            more aware of the LLM’s impact on tasks like creating, categorizing,
-            and evaluating.
+            Without this structured breakdown, many users underestimate the
+            extent of decision-making power they delegate to an LLM. By
+            visualizing these capabilities through the Bloom’s Taxonomy ladder,
+            users gain both transparency and control, becoming more aware of the
+            LLM’s impact on tasks like creating, categorizing, and evaluating.
           </ParagraphText>
 
           <GetTheCardDeck center marginTop="4rem" />
@@ -219,19 +261,13 @@ export default function App() {
               src="./assets/workshop/0.jpg"
               alt="Social worker using LLM interface"
             />
-            <img src="./assets/workshop/1.png" alt="LLM Cards in use" />
             <img
               src="./assets/workshop/2.png"
               alt="Social workers brainstorming"
             />
             <img src="./assets/workshop/3.jpg" alt="Brainstorming board" />
-            <img
-              src="./assets/workshop/4.jpg"
-              alt="Social workers organizing ideas"
-            />
           </div>
         </FloatIn>
-        {/* todo: add workshop photos here */}
 
         <FloatIn>
           <p className="text-lg font-bold italic text-center mb-8">
@@ -244,8 +280,8 @@ export default function App() {
       </Container>
 
       <Container
-        backgroundColor={colors["pastel-green"]}
-        textColor="#1C2F60"
+        backgroundColor={"#9198E5"}
+        textColor="white"
         style={{ padding: "10rem 0" }}
       >
         <FloatIn>
@@ -263,15 +299,36 @@ export default function App() {
         style={{ padding: "6rem 0" }}
       >
         <FloatIn>
-          <p className="text-lg mb-8">Team</p>
-          <p className="my-2">
-            <b className="mr-6">Whit Nelson</b> Lead Researcher
-          </p>
-          <p className="my-2">
-            <b className="mr-6">Meah Lin</b> Researcher, Writer, UI Designer
-          </p>
-          <p className="my-2">
-            <b className="mr-6">Jake Lohman</b> Writer, Developer
+          <div className="flex">
+            <img
+              src="./assets/hai.png"
+              alt="HAI lab logo"
+              className="h-12 mr-12"
+            />
+            <img
+              src="./assets/ischool.png"
+              alt="University of Texas"
+              className="h-12"
+            />
+          </div>
+
+          <p className="text-xl mt-16 mb-6 font-bold">Team Members</p>
+          <p className="mt-4 font-bold">Whit Nelson</p>
+          <p>Lead Researcher</p>
+
+          <p className="mt-4 font-bold">Meah Lin</p>
+          <p>Researcher, Writer, UI Designer</p>
+
+          <p className="mt-4 font-bold">Jake Lohman</p>
+          <p>Writer, Developer</p>
+
+          <p className="text-lg my-12">
+            We are a team of researchers, designers, and engineers at the
+            Human-AI Interaction Lab at the University of Texas at Austin. You
+            can learn more about our work at{" "}
+            <a href="https://hai.ischool.utexas.edu/" target="_blank">
+              our website.
+            </a>
           </p>
 
           <p className="mt-16 mb-4">Got any feedback for us?</p>
